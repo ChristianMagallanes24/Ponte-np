@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONTE NP - Artista Musical</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #000;
+        }
+
+        /* Header y Navegación */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #888;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('./assets/371353299_306282981951448_2541696587152694104_n.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            color: #ccc;
+        }
+
+        /* Secciones generales */
+        section {
+            padding: 5rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        /* Bio Section */
+        .bio {
+            background-color: #111;
+        }
+
+        /* Experiencia Section */
+        .experience {
+            background-color: #000;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .experience-card {
+            background-color: #111;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Discografía Section */
+        .discography {
+            background-color: #111;
+        }
+        .play-btn{
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .play-btn:hover{
+            background-color: #333;
+        }
+
+        .album {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background-color: #222;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .album img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Contacto Section */
+        .contact {
+            background-color: #000;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .album {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">PONTE NP</a>
+            <button class="menu-btn" aria-label="Menú">☰</button>
+            <div class="nav-links">
+                <a href="#bio">Bio</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#discography">Exitos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>PONTENP</h1>
+            <p>Cantante • Productor Musical • Artista Urbano</p>
+        </div>
+    </section>
+
+    <section id="bio" class="bio">
+        <div class="container">
+            <h2>Resumen Profesional</h2>
+            <p>
+                Soy cantante y productor musical especializado en música urbana y cumbia, con residencia en Montevideo, Uruguay.
+                Finalista del equipo en Got Talent Uruguay 2022, he recorrido escenarios en Uruguay y Argentina, incluyendo
+                todos los tablados de Montevideo. Mis composiciones destacan por letras auténticas y ritmos pegadizos.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Experiencia</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Cantante y Productor Musical</h3>
+                    <ul>
+                        <li>Finalista del equipo en Got Talent Uruguay 2022</li>
+                        <li>Presentaciones en Argentina y tablados de Montevideo</li>
+                        <li>Producción y apoyo en vivo para otros artistas</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>Tallerista en Música</h3>
+                    <ul>
+                        <li>Experiencia en Santa Catalina y Punta Yeguas</li>
+                        <li>Facilitación de talleres para jóvenes</li>
+                        <li>Formación vocal y producción musical</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="discography" class="discography">
+        <div class="container">
+            <h2>Exitos</h2>
+            <div class="album">
+                <img src="./assets/maxresdefault.webp" alt="Le Pido Que Sonría Album Cover">
+                <div class="album-info">
+                    <h3>"Le Pido Que Sonría"</h3>
+                    <a class="play-btn" target="_blank" href="https://www.youtube.com/watch?v=lbW4F2bLNTg">Escuchar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="social-links">
+                <a href="https://instagram.com/ponte.np" target="_blank" rel="noopener noreferrer">
+                    📷 @ponte.np
+                </a>
+                <a href="tel:092704408">
+                    📞 092 704 408
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 PONTE NP. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Menú móvil
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
